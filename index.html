@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+  <title>Friends of Education</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Friends Of Education</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="about.html">Friends of Education</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a class="active" href="book.html">Books</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/videos/video-output-B5110638-2F87-4AE2-89AD-F3D4D2439C78_2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h2>Jesse Maina</h2>
+      <p>Education Activist.YouTuber. Founder of Friends Of Education.Data Scientist.</p>
+      <a href="#" class="btn">Book Jesse To Speak </a>
+      <p class="email">📩 bookings.jessemaina05@gmail.com</p>
+    </div>
+  </section>
+  <footer>
+    <div class="socials">
+      <a href="https://www.youtube.com/@The_Jesse_Show">
+        <img src="assets/images/youtube.png" alt="YouTube" /></a>
+      <a href="#"><img src="assets/images/instagram.png" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/jesse-maina-msc-32646324b/" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/linkedin.png" alt="LinkedIn" /></a> 
+    </div>
+  </footer>
+  <section class="mission-section">
+  <div class="mission-container">
+    <div class="mission-image">
+      <img src="assets/images/IMG_9739.jpeg" alt="Our Mission">
+    </div>
+    <div class="mission-text">
+      <h2>Jesse Maina</h2>
+      <p>
+        Jesse Maina is a dynamic data engineer with a Master’s in Data Science & Analytics and a Bachelor’s in Informatics.
+         His work is rooted in leveraging machine learning to transform education and healthcare systems, driving innovation where it's most needed.
+          Beyond the technical realm, Jesse is a passionate storyteller and advocate for youth empowerment. 
+          He is the founder of Friends of Education, an initiative that uplifts underprivileged learners, and the creator behind The Jesse Show—a YouTube channel that explores the intersections of education, opportunity, and social change.
+           Jesse is also the author of A Played Nation, a reflective work that blends activism and narrative, and a spoken word artist and poet who uses his voice to inspire and provoke thought. His multidisciplinary approach bridges data, creativity, and advocacy to shape a more equitable future.
+      </p> 
+    </div>
+  </div>
+</section>
+<footer>
+
+</footer>
+<section class="testimonial-wrapper">
+  <div class="testimonial-slide">
+    <div class="testimonial-image">
+      <img src="assets\images\IMG_0976.jpeg" alt="J Blackman" />
+    </div>
+    <div class="testimonial-content">
+      <h3>Jesse Maina</h3>
+      <p class="subtitle">Founder: Friends of Education</p>
+      <p class="subtitle">Author: A played Nation</p>
+      
+      <p class="quote">“You can not understand the value of giving if you have never lacked”</p>
+    </div>
+
+    <div class="testimonial-image">
+      <img src="assets\images\IMG_0976.jpeg" alt="J Blackman" />
+    </div>
+    <div class="testimonial-content">
+      <h3>Kennedy Kamara</h3>
+      <p class="subtitle">Patron:Friends of Education</p>
+      
+      <p class="quote">“You can not understand the value of giving if you have never lacked”</p>
+    </div>
+  </div>
+  
+</section>
+<footer>
+    &copy; 2025 Jesse Maina | All Rights Reserved
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    window.nextTestimonial = function () {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+    };
+
+    window.prevTestimonial = function () {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentIndex);
+    };
+
+    // Auto-cycle every 5 seconds
+    setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+
+    // Initialize first testimonial on load
+    showTestimonial(currentIndex);
+  });
+</script>
+
+</body>
+</html>

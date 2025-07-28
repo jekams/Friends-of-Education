@@ -1,0 +1,272 @@
+/*index css*/
+body, html {
+  margin: 0;
+ font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgb(229, 235, 235);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: rgba(134, 130, 8, 0.749);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(134, 130, 8, 0.749);
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  z-index: -1; /* Put behind content */
+}
+
+.overlay {
+  z-index: 1;
+  padding: 2rem;
+  background: rgba(13, 13, 13, 0.4); /* optional dark overlay */
+  border-radius: 10px;
+}
+.overlay h2 {
+  font-size: 3rem;     /* Main heading size */
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5em;
+  color: rgb(228, 224, 224);
+}
+.overlay p {
+  font-size: 1.3rem;    /* Subtitle size */
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: rgb(189, 200, 69);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.email {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+/*hero2 css*/
+.hero2 {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.mission-section {
+  background-color: #fff8dc; /* soft yellow */
+  padding: 60px 20px;
+}
+
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.mission-image img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.mission-text {
+  flex: 1 1 500px;
+  color: #222;
+  font-family: 'Playfair Display', serif;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mission-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+/*footer css*/
+footer {
+  background: rgb(191, 205, 205);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.socials a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socials a:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+/*about css*/
+.about {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Playfair Display', serif;
+  color: #111;
+}
+
+.about h2 {
+  font-size: 3em;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5em;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-images blockquote {
+  font-style: italic;
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+/* testimonials css*/
+.testimonial-wrapper {
+  background-color: #fff8c6; /* soft yellow */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-slide {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background-color: transparent;
+}
+
+.testimonial-image img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+  text-align: left;
+}
+
+.testimonial-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+.testimonial-content .subtitle {
+  font-size: 1rem;
+  color: #999;
+  margin-top: 5px;
+}
+
+.testimonial-content .line {
+  width: 40px;
+  height: 2px;
+  background-color: #f2cd00;
+  margin: 16px 0;
+}
+
+.testimonial-content .quote {
+  font-size: 1.2rem;
+  color: #333;
+  font-style: italic;
+  line-height: 1.6;
+}
