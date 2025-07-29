@@ -1,19 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-
   <title>Friends of Education</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body,
+    html {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: whitesmoke;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: rgb(16, 16, 15);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(10, 10, 10);
+      font-weight: bold;
+    }
+
+
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      gap: 20px;
+    }
+
+    .hero-section {
+      display: flex;
+
+    }
+
+    .hero-image {
+      flex: 0.4;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-content {
+      flex: 0.6;
+      background-color: #d7cd75;
+      /* soft yellow */
+      padding: 100px;
+      display: cover;
+
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 25px;
+    }
+
+    .hero-content p {
+      font-size: 1.5em;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .read-more {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #fdd835;
+      color: #000;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .read-more:hover {
+      background-color: #fbc02d;
+    }
+
+    footer {
+      background: rgb(191, 205, 205);
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    .testimonial-wrapper {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-slide {
+      display: none;
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-slide.active {
+      display: flex;
+    }
+
+    .testimonial-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 70%;
+      object-fit: cover;
+      border: 5px solid #f2f2f2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-content {
+      flex: 1;
+    }
+
+    .testimonial-content h3 {
+      font-size: 1.8rem;
+      margin: 0 0 5px;
+      color: #2c3e50;
+    }
+
+    .testimonial-content .subtitle {
+      font-size: 1rem;
+      color: #0d0e0e;
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .testimonial-content .quote {
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #968b08;
+      border-left: 4px solid #d7c60f;
+      padding-left: 15px;
+
+    }
+
+    .testimonial-heading {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #68816e;
+      font-family: 'Playfair Display', serif;
+    }
+
+
+    .socials {
+      text-align: center;
+      margin: 40px 0 40px;
+
+    }
+
+    .socials img {
+      width: 40px;
+      margin: 0 10px;
+    }
+
+
+    @media (max-width: 768px) {
+      .testimonial-slide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .testimonial-content {
+        text-align: left;
+        padding-top: 20px;
+      }
+
+      .testimonial-image img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1 class="logo">Friends Of Education</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a class="active" href="about.html">Friends of Education</a></li>
         <li><a class="active" href="projects.html">Projects</a></li>
         <li><a class="active" href="book.html">Books</a></li>
@@ -24,103 +238,116 @@
 
   <section class="hero">
     <video autoplay muted loop playsinline class="bg-video">
-        <source src="assets/videos/video-output-B5110638-2F87-4AE2-89AD-F3D4D2439C78_2.mp4" type="video/mp4">
+      <source src="assets/videos/video-output-B5110638-2F87-4AE2-89AD-F3D4D2439C78_2.mp4" type="video/mp4">
     </video>
-    <div class="overlay">
-      <h2>Jesse Maina</h2>
-      <p>Education Activist.YouTuber. Founder of Friends Of Education.Data Scientist.</p>
-      <a href="#" class="btn">Book Jesse To Speak </a>
-      <p class="email">📩 bookings.jessemaina05@gmail.com</p>
+  </section>
+
+  <section class="hero-section">
+    <div class="hero-image">
+      <img src="assets/images/IMG_1340.jpeg" alt="Jesse Maina">
+    </div>
+    <div class="hero-content">
+      <h1>Meet Jesse Maina</h1>
+      <p>
+        Jesse Maina is a data engineer with a Master’s in Data Science & Analytics and a Bachelor’s in
+        Informatics. His work is rooted in leveraging machine learning to transform education and healthcare systems.
+        Beyond the technical realm, Jesse is a passionate storyteller and advocate for youth empowerment. He is
+        a dynamic voice in education reform and youth empowerment. Through Friends of Education, he has transformed
+        personal challenges into a mission to make quality education accessible to marginalized students. What began as
+        a one-student sponsorship has grown into a grassroots initiative supporting multiple learners across Kenya.
+
+      <p>As the visionary behind The Jesse Show, a youtube platform for storytelling, interviews, and social
+        dialogue,
+        Jesse curates conversations that spotlight real stories—from grassroots activism to global innovation. The show
+        is a platform for underrepresented voices, with a focus on education, diaspora leadership, and civic
+        responsibility.</p>
+
+      <p>He is also the author of <strong>A Played
+          Nation</strong>, a powerful memoir that weaves personal narrative with political
+        critique. The book reflects on Kenya’s 2022 elections and explores the intersections of youth, democracy, and
+        identity. Blending memoir with activism, A Played Nation challenges readers to consider how political systems
+        shape personal destinies.</p>
+
+      <p> His work across media, education, and literature is driven by a deep belief: that access, opportunity, and
+        storytelling can change lives.</p>
+      </p>
+
+      <a href="about.html" class="read-more">Read More</a>
     </div>
   </section>
-  <footer>
-    <div class="socials">
-      <a href="https://www.youtube.com/@The_Jesse_Show">
-        <img src="assets/images/youtube.png" alt="YouTube" /></a>
-      <a href="#"><img src="assets/images/instagram.png" alt="Instagram" /></a>
+
+  <h2 class="testimonial-heading">TESTIMONIALS</h2>
+  <section class="testimonial-wrapper">
+    <div class="testimonial-slide active">
+      <div class="testimonial-image">
+        <img src="assets/images/Kamara kennedy.jpeg" alt="Kamara Kennedy" />
+      </div>
+      <div class="testimonial-content">
+        <h3>Kamara Kennedy</h3>
+        <p class="subtitle">Patron: Friends of Education</p>
+        <p class="subtitle">All children should be in school. But this is not the case most of the time.
+          Any initiative to keep bright students in school against all odds is an act of Divine visitation.
+          I have witnessed God’s touch in the lives of students who had given up on school.
+          The impact is immense, indelible, and commendable.
+          Long live the Friends of Gacatha Initiative!
+        </p>
+        <p class="quote">“You cannot understand the value of giving if you have never lacked.”</p>
+      </div>
+    </div>
+
+    <div class="testimonial-slide">
+      <div class="testimonial-image">
+        <img src="assets/images/Charity Ndumia.jpeg" alt="Jane Doe" />
+      </div>
+      <div class="testimonial-content">
+        <h3>Charity Ndumia</h3>
+        <p class="subtitle">Donor: Friends of Education</p>
+        <p class="subtitle">Friends of Education has given students renewed hope and motivation.
+          It's not just about finances — it's about restoring dignity and dreams.
+          I’ve seen lives change right before my eyes. This is real transformation.
+        </p>
+        <p class="quote">“Sometimes, one opportunity is all a child needs.”</p>
+      </div>
+    </div>
+  </section>
+  <section class="social-section">
+    <div class="socials" style="text-align: center; margin: 40px 0;">
+      <a href="https://www.youtube.com/@The_Jesse_Show" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/youtube.png" alt="YouTube" style="width: 40px; margin: 0 10px;" />
+      </a>
+      <a href="#">
+        <img src="assets/images/instagram.png" alt="Instagram" style="width: 40px; margin: 0 10px;" />
+      </a>
       <a href="https://www.linkedin.com/in/jesse-maina-msc-32646324b/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/images/linkedin.png" alt="LinkedIn" /></a> 
-    </div>
-  </footer>
-  <section class="mission-section">
-  <div class="mission-container">
-    <div class="mission-image">
-      <img src="assets/images/IMG_9739.jpeg" alt="Our Mission">
-    </div>
-    <div class="mission-text">
-      <h2>Jesse Maina</h2>
-      <p>
-        Jesse Maina is a dynamic data engineer with a Master’s in Data Science & Analytics and a Bachelor’s in Informatics.
-         His work is rooted in leveraging machine learning to transform education and healthcare systems, driving innovation where it's most needed.
-          Beyond the technical realm, Jesse is a passionate storyteller and advocate for youth empowerment. 
-          He is the founder of Friends of Education, an initiative that uplifts underprivileged learners, and the creator behind The Jesse Show—a YouTube channel that explores the intersections of education, opportunity, and social change.
-           Jesse is also the author of A Played Nation, a reflective work that blends activism and narrative, and a spoken word artist and poet who uses his voice to inspire and provoke thought. His multidisciplinary approach bridges data, creativity, and advocacy to shape a more equitable future.
-      </p> 
-    </div>
-  </div>
-</section>
-<footer>
-
-</footer>
-<section class="testimonial-wrapper">
-  <div class="testimonial-slide">
-    <div class="testimonial-image">
-      <img src="assets\images\IMG_0976.jpeg" alt="J Blackman" />
-    </div>
-    <div class="testimonial-content">
-      <h3>Jesse Maina</h3>
-      <p class="subtitle">Founder: Friends of Education</p>
-      <p class="subtitle">Author: A played Nation</p>
-      
-      <p class="quote">“You can not understand the value of giving if you have never lacked”</p>
+        <img src="assets/images/linkedin.png" alt="LinkedIn" style="width: 40px; margin: 0 10px;" />
+      </a>
     </div>
 
-    <div class="testimonial-image">
-      <img src="assets\images\IMG_0976.jpeg" alt="J Blackman" />
-    </div>
-    <div class="testimonial-content">
-      <h3>Kennedy Kamara</h3>
-      <p class="subtitle">Patron:Friends of Education</p>
-      
-      <p class="quote">“You can not understand the value of giving if you have never lacked”</p>
-    </div>
-  </div>
-  
-</section>
-<footer>
+  </section>
+
+  <footer>
     &copy; 2025 Jesse Maina | All Rights Reserved
   </footer>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial');
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 0;
+      const testimonials = document.querySelectorAll('.testimonial-slide');
 
-    function showTestimonial(index) {
-      testimonials.forEach((testimonial, i) => {
-        testimonial.style.display = i === index ? 'block' : 'none';
-      });
-    }
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+          testimonial.classList.toggle('active', i === index);
+        });
+      }
 
-    window.nextTestimonial = function () {
-      currentIndex = (currentIndex + 1) % testimonials.length;
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex);
+      }, 5000);
+
       showTestimonial(currentIndex);
-    };
-
-    window.prevTestimonial = function () {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      showTestimonial(currentIndex);
-    };
-
-    // Auto-cycle every 5 seconds
-    setInterval(() => {
-      nextTestimonial();
-    }, 5000);
-
-    // Initialize first testimonial on load
-    showTestimonial(currentIndex);
-  });
-</script>
-
+    });
+  </script>
 </body>
+
 </html>

@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Jesse Maina</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    body,
+    html {
       margin: 0;
-      padding: 0;
-      background: #f7f9fc;
-      color: #333;
+      font-family: 'Playfair Display', serif;
+      scroll-behavior: smooth;
     }
 
     header {
-      background: rgb(229, 235, 235);
-      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px;
-      text-align: center;
+      background: whitesmoke;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    .logo {
+       color: rgb(16, 16, 15);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(10, 10, 10);
+      font-weight: bold;
+    }
+
 
     .projects-container {
       max-width: 1000px;
@@ -62,6 +85,7 @@
     .project p {
       line-height: 1.6;
     }
+
     .project-links {
       margin-top: 15px;
     }
@@ -102,8 +126,9 @@
     }
   </style>
 </head>
+
 <body>
-<header>
+  <header>
     <h1 class="logo">Friends Of Education</h1>
     <nav>
       <ul>
@@ -120,59 +145,69 @@
 
     <div class="project">
       <img src="assets/images/IMG_1235.png" alt="Friends of Education">
-      <div class="project-content">  
-      <h2>Friends of Education</h2>
-      <p>
-        Founded in 2024, Friends of Education is a grassroots initiative committed to making education accessible for underprivileged students. Inspired by my return to my high school after 10 years, we began by sponsoring one student. Today, we've supported nine students—some of whom are orphans—through tuition, books, and uniforms. Our vision is to break cycles of poverty by investing in young minds.
-      </p>
-      <div class="project-links">
+      <div class="project-content">
+        <h2>Friends of Education</h2>
+        <p>
+          Founded in 2024, Friends of Education is a grassroots initiative committed to making education accessible for
+          underprivileged students. Inspired by my return to my high school after 10 years, we began by sponsoring one
+          student. Today, we've supported nine students—some of whom are orphans—through tuition, books, and uniforms.
+          Our vision is to break cycles of poverty by investing in young minds.
+        </p>
+        <div class="project-links">
           <a href="about.html" target="_blank">Visit Site</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-    
+
       <img src="assets/images/my channel.jpg" alt="The Jesse Show">
-      <div class="project-content"> 
-      <h2>The Jesse Show</h2>
-      <p>
-        <strong>The Jesse Show</strong> is my YouTube platform dedicated to conversations on education, youth empowerment, and societal transformation. With a focus on authentic storytelling and real-world impact, the channel invites young people to rethink possibilities and take ownership of their future.
-      </p>
-      <div class="project-links">
+      <div class="project-content">
+        <h2>The Jesse Show</h2>
+        <p>
+          <strong>The Jesse Show</strong> is my YouTube platform dedicated to conversations on education, youth
+          empowerment, and societal transformation. With a focus on authentic storytelling and real-world impact, the
+          channel invites young people to rethink possibilities and take ownership of their future.
+        </p>
+        <div class="project-links">
           <a href="https://www.youtube.com/@The_Jesse_Show" target="_blank">Visit channel</a>
         </div>
-    </div>
+      </div>
     </div>
 
     <div class="project">
-        <img src="" alt="Lauching soon">
-        <div class="project-content">
-      <h2>A Played Nation</h2>
-      <p>
-        <em>A Played Nation</em> is my debut book and poetic reflection on political awakening, social betrayal, and the dreams of a new generation. It’s a literary and spoken-word project that speaks to both personal struggle and collective hope. 
-        The work highlights the cost of silence and the power of civic participation.  
-      </p>
-      <div class="project-links">
+      <img src="" alt="Lauching soon">
+      <div class="project-content">
+        <h2>A Played Nation</h2>
+        <p>
+          <em>A Played Nation</em> is my debut book and poetic reflection on political awakening, social betrayal, and
+          the dreams of a new generation. It’s a literary and spoken-word project that speaks to both personal struggle
+          and collective hope.
+          The work highlights the cost of silence and the power of civic participation.
+        </p>
+        <div class="project-links">
           <a href="book.html" target="_blank">Launching Soon</a>
         </div>
-    </div>
+      </div>
     </div>
 
     <div class="project">
-       <img src="assets/images/Machine Learning.jpg" alt="Machine Learning">
-      <div class="project-content"> 
-      <h2>Data & Machine Learning Projects</h2>
-      <p>
-        With a Master’s in Data Science & Analytics, I work at the intersection of education and healthcare innovation.
-         My current focus is on leveraging machine learning to predict student outcomes and improve mental health screening using machine learning models.
-          I have build predictive models to explore gene profiles,recommender systems—<strong>Multi-modal linear regressions</strong>- to advance precision medicine.
-      </p>
-    <div class="project-links">
-          <a href="https://github.com/jekams/activity01-course-tools/blob/main/Copy_of_CIS678_project_1.ipynb" target="_blank">GitHub</a>
-          
-     </div>
-    </div>
+      <img src="assets/images/Machine Learning.jpg" alt="Machine Learning">
+      <div class="project-content">
+        <h2>Data & Machine Learning Projects</h2>
+        <p>
+          With a Master’s in Data Science & Analytics, I work at the intersection of education and healthcare
+          innovation.
+          My current focus is on leveraging machine learning to predict student outcomes and improve mental health
+          screening using machine learning models.
+          I have build predictive models to explore gene profiles,recommender systems—<strong>Multi-modal linear
+            regressions</strong>- to advance precision medicine.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/jekams/My_Projects" target="_blank">GitHub</a>
+
+        </div>
+      </div>
     </div>
 
   </div>
@@ -181,4 +216,5 @@
     &copy; 2025 Jesse Maina | All Rights Reserved
   </footer>
 </body>
+
 </html>
