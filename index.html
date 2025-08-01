@@ -19,7 +19,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background: whitesmoke;
+      background:rgb(191, 205, 205);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -47,7 +47,7 @@
 
     .hero {
       position: relative;
-      height: 70vh;
+      height: 90vh;
       overflow: hidden;
     }
 
@@ -64,7 +64,7 @@
     }
 
     .hero-image {
-      flex: 0.4;
+      flex: 0.5;
     }
 
     .hero-image img {
@@ -75,7 +75,7 @@
     }
 
     .hero-content {
-      flex: 0.6;
+      flex: 0.5;
       background-color: #d7cd75;
       /* soft yellow */
       padding: 100px;
@@ -93,7 +93,7 @@
     }
 
     .hero-content p {
-      font-size: 1.5em;
+      font-size: 1.2em;
       line-height: 1.7;
       color: #333;
       margin-bottom: 20px;
@@ -224,7 +224,10 @@
 
 <body>
   <header>
-    <h1 class="logo">Friends Of Education</h1>
+    <h1 class="logo"> <a href="#" onclick="event.preventDefault(); location.reload();"
+        style="text-decoration: none; color: inherit;">
+        Friends Of Education
+      </a></h1>
     <nav>
       <ul>
         <li><a class="active" href="index.html">Home</a></li>
@@ -238,7 +241,7 @@
 
   <section class="hero">
     <video autoplay muted loop playsinline class="bg-video">
-      <source src="assets/videos/video-output-B5110638-2F87-4AE2-89AD-F3D4D2439C78_2.mp4" type="video/mp4">
+      <source src="assets/videos/Friends.mp4" type="video/mp4">
     </video>
   </section>
 

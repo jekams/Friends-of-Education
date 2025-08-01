@@ -19,7 +19,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background: whitesmoke;
+            background:rgb(191, 205, 205);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,7 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgb(255, 255, 255);
+            color: rgb(99, 91, 91);
             text-shadow: 1px 1px 5px #000;
             text-align: center;
             padding: 2rem;
@@ -87,7 +87,10 @@
 
 <body>
     <header>
-        <h1 class="logo">Friends Of Education</h1>
+        <h1 class="logo"> <a href="#" onclick="event.preventDefault(); location.reload();"
+        style="text-decoration: none; color: inherit;">
+        Friends Of Education
+      </a></h1>
         <nav>
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
@@ -98,8 +101,6 @@
             </ul>
         </nav>
     </header>
-
-
     <section class="hero-section">
         <h1>A Played Nation: A Memoir of Hope and Betrayal</h1>
     </section>
